@@ -24,4 +24,4 @@ $ git clone https://github.com/fernandoCordova/lasthit.git
 ```
 * ## Derechos de autor
 ***
-Todos los derechos reservados al autor del proyecto y colaboradores.
+Todos los derechos reservados al autor del proyecto Fernando Córdova y colaboradores.
