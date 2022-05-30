@@ -22,6 +22,6 @@ $ git clone https://github.com/fernandoCordova/lasthit.git
 - Prender el servidor web local (Xampp, Wamp o Mamp).
 - Entrar a localhost/lasthit
 ```
-* ## Instalación del proyecto
+* ## Derechos de autor
 ***
 Todos los derechos reservados al autor del proyecto y colaboradores.
