@@ -5,7 +5,6 @@ LastHit es una plataforma para revisar diferentes aspectos del videojuego League
 ## Estado del proyecto
 ***
 Estado: En desarrollo.
-Ultima actualización:
 * inicio: Terminado.
 * Modulo invocador: Terminado.
 * Modulo personajes: Terminado.
