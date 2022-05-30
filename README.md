@@ -18,6 +18,7 @@ A little intro about the installation.
 - Abrir la carpeta donde se quiere almacenar el proyecto de forma local.
 $ git clone https://github.com/fernandoCordova/lasthit.git
 - Abrir el archivo BDConfiguracion.php y cambiar los parametros de conexion local de mysql con los establecidos en su equipo.
+- Abrir el gestor de base de datos e importar el archivo lasthit.sql de la carpeta database
 - Prender el servidor web local (Xampp, Wamp o Mamp).
 - Entrar a localhost/lasthit
 ```
