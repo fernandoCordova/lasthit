@@ -2,9 +2,24 @@
 ## Descripción y objetivo
 ***
 LastHit es una plataforma para revisar diferentes aspectos del videojuego League of legends consumiendo directamente el contenido que ofrece la api del mismo.
+## Estado del proyecto
+***
+Estado: En desarrollo.
+Ultima actualización:
+* [inicio]: Terminado.
+* [Modulo invocador]: Terminado.
+* [Modulo personajes]: Terminado.
+* [Modulo objetos]: Terminado.
+* [Modulo ranking]: Proceso.
+* [Modulo login]: Pendiente.
+* [Modulo registro]: Pendiente.
+* [Modulo perfil]: Pendiente.
+* [Modulo recuperar contraseña]: Pendiente.
+* [Modulo dashboard admin]: Pendiente.
+* [Modulo crud usuarios]: Pendiente.
 ## Tecnologias
 ***
-A list of technologies used within the project:
+Tecnologias usadas en el proyecto:
 * [PHP]: Version 7.4 
 * [Javascript]
 * [Jquery]: Version 3.6
@@ -13,7 +28,7 @@ A list of technologies used within the project:
 * [CSS]
 * ## Instalación del proyecto
 ***
-A little intro about the installation. 
+Instalacion. 
 ```
 - Abrir la carpeta donde se quiere almacenar el proyecto de forma local.
 $ git clone https://github.com/fernandoCordova/lasthit.git
