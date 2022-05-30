@@ -1,0 +1,50 @@
+#Opciones para reescritura de la configuracion del servidor con htaccess
+Options +FollowSymLinks
+RewriteEngine on
+
+#Evitar que se puedan listar la estructura de la pagina
+Options -Indexes
+
+#Definir una pagina de index
+DirectoryIndex views/inicio/inicio.php
+
+#Rutas para las vistas
+RewriteRule ^campeon$ views/analisis_campeones/buscar_campeon.php
+RewriteRule ^campeon/detalles/(.+)$ views/analisis_campeones/detalles_campeon.php?campeon=$1
+RewriteRule ^objeto$ views/buscar_objetos/buscar_objetos.php
+RewriteRule ^objeto/detalles/(.+)$ views/buscar_objetos/detalles_objetos.php?objeto=$1
+RewriteRule ^invocador$ views/buscar_invocador/buscar_invocador.php
+RewriteRule ^invocador/detalles/(.+)$ views/buscar_invocador/detalles_invocador.php?invocador=$1
+RewriteRule ^invocador/error/$ views/buscar_invocador/invocador_no_encontrado.php
+RewriteRule ^dashboard/administrador/crud/usuario$ views/crud_usuarios/crud_usuario.php
+RewriteRule ^dashboard/administrador/$ views/dashboard_administrador/dashboard_administrador.php
+RewriteRule ^inicio$ views/inicio/inicio.php
+RewriteRule ^login$ views/inicio_sesion/inicio_sesion.php
+RewriteRule ^restaurar_clave$ views/inicio_sesion/recuperar_clave.php
+RewriteRule ^cambiar_clave$ views/inicio_sesion/cambiar_clave.php
+RewriteRule ^perfil$ views/perfil/perfil.php
+RewriteRule ^ranking$ views/ranking/ranking.php
+RewriteRule ^registro$ views/registro/registro.php
+
+#Rutas para los controladores
+RewriteRule ^controladorCampeones$ controller/AnalisisCampeonesController.php
+RewriteRule ^controladorInvocador$ controller/BuscarInvocadorController.php
+RewriteRule ^controladorCrudUsuarios$ controller/CrudUsuariosController.php
+RewriteRule ^controladorDashboardAdministrador$ controller/DashboardAdministradorController.php
+RewriteRule ^controladorInicio$ controller/InicioController.php
+RewriteRule ^controladorLogin$ controller/InicioSesionController.php
+RewriteRule ^controladorObjetos$ controller/ObjetosController.php
+RewriteRule ^controladorPerfil$ controller/PerfilController.php
+RewriteRule ^controladorRanking$ controller/RankingController.php
+RewriteRule ^controladorRegistro$ controller/RegistroController.php
+
+#Bloqueo a archivos
+<files ApiConfiguracion.php>
+order allow,deny
+deny from all
+</files>
+
+<files BDConfiguracion.php>
+order allow,deny
+deny from all
+</files>

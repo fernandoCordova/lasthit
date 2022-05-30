@@ -1,0 +1,88 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #353a40;
+  color: #f2f2f2;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  margin-top: 2rem;
+}
+
+.imagen-navbar {
+  width: 15rem;
+  height: 2rem;
+  object-fit: cover;
+  object-position: 60% 37%;
+  margin: 0.2rem;
+}
+
+.boton-general {
+  font-size: 1.2rem;
+  background-color: #1d7373;
+  color: #f2f2f2;
+}
+
+.boton-general:hover {
+  background-color: #185f5f;
+  color: #f2f2f2;
+}
+
+.bordes-card {
+  border-color: #1d7373;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+}
+
+.contenedor-tablas {
+  background-color: #353a40;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.tabla-personalizada {
+  color: #f2f2f2;
+}
+
+.page-item {
+  background-color: #1d7373;
+  color: #f2f2f2;
+  border-color: #1d7373;
+}
+
+.page-item:hover {
+  background-color: #185f5f;
+  color: #f2f2f2;
+}
+
+.label-personalizado {
+  color: #353a40;
+}
+
+.enlace-personalizado {
+  color: #7ed9d9;
+}
+
+.enlace-personalizado:hover {
+  color: #43c8c8;
+}
+
+.dropdown-item:active {
+  color: #f2f2f2;
+  background-color: #185f5f;
+}
+
+.btn-navbar{
+  background-color: transparent;
+  border: transparent;
+}

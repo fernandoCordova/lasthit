@@ -1,0 +1,54 @@
+.boton-select-region {
+  font-size: 1.2rem;
+  background-color: #1d7373;
+  color: #f2f2f2;
+}
+
+.boton-select-region:hover {
+  background-color: #1d7373;
+  color: #f2f2f2;
+}
+
+.boton-tab-detalles-invocador {
+  color: #f2f2f2;
+}
+
+.boton-tab-detalles-invocador:hover {
+  color: #f2f2f2;
+}
+
+.contenedor-img-invocador {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.img-icono-invocador {
+  border-radius: 1rem;
+  border: #04bfbf;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.nivel-invocador {
+  position: absolute;
+  top: 8rem;
+  left: 4rem;
+  border: #04bfbf;
+  background-color: #1d7373;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+
+.img-logo-ligas {
+  text-align: center;
+  padding: 0.5rem;
+  width: 12rem;
+  margin-left: 5rem;
+}
+
+.texto-ligas {
+  padding-top: 2.5rem;
+}

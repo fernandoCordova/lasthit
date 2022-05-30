@@ -1,0 +1,30 @@
+.bi {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: #353a40;
+}
+
+.separador-contenido-inicio {
+  color: #04bfbf;
+}
+
+.descripcion-titulo-principal {
+  text-align: justify;
+}
+
+.feature {
+  background-color: #04bfbf;
+}
+
+.descripcion-beneficios {
+  text-align: justify;
+}
+
+.texto-equipo-trabajo {
+  color: #353a40;
+}
+
+.imagen-equipo{
+  width: auto;
+  height: 25rem;
+}

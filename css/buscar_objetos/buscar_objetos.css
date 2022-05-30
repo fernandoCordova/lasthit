@@ -1,0 +1,23 @@
+.contenedor-tarjeta-analisis-objeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .texto-justificado{
+  text-align: justify;
+  }
+  
+  .nombre-habilidad{
+    color: #7ED9D9
+  }
+  
+  .costos-habilidad{
+    color: #04BFBF;
+    font-size: 0.8rem;
+  }
+  
+  .descripcion-habilidad{
+    color: #f2f2f2;
+    text-align: justify;
+  }
