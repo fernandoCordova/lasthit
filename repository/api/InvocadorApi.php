@@ -12,6 +12,17 @@ class InvocadorApi
         return $data;
     }
 
+    public function obtenerRanking($region, $apiKey)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://' . $region . '.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=' . $apiKey);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        return $data;
+    }
+
     function obtenerPersonajesPorInvocador($region, $idInvocador, $apiKey, $personajes)
     {
         $ch = curl_init();

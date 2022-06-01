@@ -57,7 +57,11 @@
                             <button class="nav-link btn-navbar" name="btnBuscarObjeto" value="buscarObjeto">Objetos</button>
                         </li>
                     </form>
-                    <li class="nav-item"><a class="nav-link" href="http://localhost/lasthit/ranking">Ranking</a></li>
+                    <form action="http://localhost/lasthit/controladorRanking" method="post">
+                        <li class="nav-item">
+                            <button class="nav-link btn-navbar" name="btnRanking" value="ranking">Ranking</button>
+                        </li>
+                    </form>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">

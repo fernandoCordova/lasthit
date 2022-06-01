@@ -7,6 +7,7 @@ if (!isset($_SESSION['personajes'])) {
     unset($_SESSION['idPersonaje']);
     include_once('../layout/header.php');
     $personajes = json_decode($_SESSION['personajes'])->{'data'};
+    
 ?>
     <link rel="stylesheet" href="http://localhost/lasthit/css/analisis_campeones/analisis_campeones.css">
     <div class="container my-5">
