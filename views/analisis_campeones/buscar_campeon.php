@@ -10,7 +10,7 @@ $personajes = json_decode($_SESSION['personajes'])->{'data'};
                 <div class="card bg-dark bordes-card mb-5">
                     <div class="card-body">
                         <div class="mb-4 text-center">
-                            <img src="https://i.ibb.co/m45cLbT/pngegg.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
+                            <img src="https://i.ibb.co/1RTHQDT/ashe-min.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                         </div>
                         <div class="mb-4">
                             <h1 class="text-center">Buscar personajes</h1>

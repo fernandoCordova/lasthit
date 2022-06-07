@@ -11,7 +11,7 @@ $regiones = $_SESSION['regiones'];
             <div class="card bg-dark bordes-card mb-5">
                 <div class="card-body">
                     <div class="mb-4 text-center">
-                        <img src="https://i.ibb.co/SPkfqXY/pngegg.png" class="img-fluid" alt="logo-buscar-invocador" width="150">
+                        <img src="https://i.ibb.co/852Dch3/olaf-min.png" class="img-fluid" alt="logo-buscar-invocador" width="150">
                     </div>
                     <div class="mb-4">
                         <h1 class="text-center">Mejores jugadores de <?php echo $_SESSION['region'] ?></h1>

@@ -10,7 +10,7 @@ if (isset($_SESSION['regiones'])) {
                 <div class="card bg-dark bordes-card">
                     <div class="card-body">
                         <div class="my-3 text-center">
-                            <img src="https://i.ibb.co/2FnKq00/pngkey-com-league-of-legends-png-136239.png" class="img-fluid" alt="logo-buscar-invocador" width="450">
+                            <img src="https://i.ibb.co/g6JGLB7/jhin-min.png" class="img-fluid" alt="logo-buscar-invocador" width="450">
                         </div>
                         <div class="my-4">
                             <h1 class="text-center">Buscar invocador</h1>

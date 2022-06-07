@@ -12,7 +12,7 @@ include_once('../layout/header.php');
                     <p class="lead fw-normal mb-4 descripcion-titulo-principal">LastHit es una plataforma que ayuda a los jugadores del juego League Of Legends a mejorar y revisar diferentes aspectos como estadisticas, graficos y clasificaciones.</p>
                 </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://i.ibb.co/b6QZfsx/1366-2000.jpg" alt="imagen-inicio" /></div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://i.ibb.co/BwHDw8V/imagen-inicio-min.jpg" alt="imagen-inicio" /></div>
         </div>
     </div>
 </header>

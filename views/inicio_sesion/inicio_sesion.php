@@ -11,7 +11,7 @@ include_once('../layout/header.php');
                         <div class="card rounded-lg mt-5 bg-dark bordes-card">
                             <div class="card-body">
                                 <div class="mb-4 text-center">
-                                    <img src="https://i.ibb.co/M6tBMnh/pngwing-com.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
+                                    <img src="https://i.ibb.co/BPPhQ1X/yasuo-min.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                                 </div>
                                 <h3 class="text-center font-weight-light my-4">Inicio de sesión</h3>
                                 <form action="http://localhost/lasthit/controladorLogin" method="POST">
@@ -46,7 +46,11 @@ include_once('../layout/header.php');
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="registro" class="enlace-personalizado">¿Necesitas una cuenta? Registrate ahora!</a></div>
+                                <form action="http://localhost/lasthit/controladorRegistro" method="post">
+                                    <div class="small">
+                                        <button class="enlace-personalizado" type="submit" name="btnRegistro" value="registro">¿Necesitas una cuenta? Registrate ahora!</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

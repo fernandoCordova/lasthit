@@ -7,7 +7,7 @@ if (isset($_POST['btnRegistro'])) {
     //Importar las clases necesarias
     include_once('../model/Usuario.php');
     include_once('../repository/sql/UsuarioSql.php');
-    include_once('../repository/api/invocadorApi.php');
+    include_once('../repository/api/InvocadorApi.php');
     include_once('../repository/sql/RegionSql.php');
     include_once('../config/BDConfiguracion.php');
     include_once('../config/ApiConfiguracion.php');

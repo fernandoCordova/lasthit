@@ -10,7 +10,7 @@ if (isset($_SESSION['usuario'])) {
                 <div class="card bg-dark bordes-card mb-5">
                     <div class="card-body">
                         <div class="mb-4 text-center">
-                            <img src="https://i.ibb.co/bsvT9q2/pngegg-1.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
+                            <img src="https://i.ibb.co/LPK8LZg/alistar-min.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                         </div>
                         <div class="mb-4">
                             <h1 class="text-center">Configuracion de perfil</h1>

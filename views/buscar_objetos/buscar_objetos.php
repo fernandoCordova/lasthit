@@ -9,7 +9,7 @@ $objetos = json_decode($_SESSION['objetos'])->{'data'};
             <div class="card bg-dark bordes-card mb-5">
                 <div class="card-body">
                     <div class="mb-4 text-center">
-                        <img src="https://i.ibb.co/68nFvYg/pngwing-com.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
+                        <img src="https://i.ibb.co/cLVTNhb/zed-min.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                     </div>
                     <div class="mb-4">
                         <h1 class="text-center">Buscar objetos</h1>

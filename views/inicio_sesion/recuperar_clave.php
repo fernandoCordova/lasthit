@@ -11,7 +11,7 @@ include_once('../layout/header.php');
                         <div class="card rounded-lg mt-5 bg-dark bordes-card">
                             <div class="card-body">
                                 <div class="mb-4 text-center">
-                                    <img src="https://i.ibb.co/hsgvHGw/pngwing-com.png" class="img-fluid" alt="logo-buscar-invocador" width="350">
+                                    <img src="https://i.ibb.co/Y7zznRx/taric-min.png" class="img-fluid" alt="logo-buscar-invocador" width="350">
                                 </div>
                                 <h3 class="text-center font-weight-light my-4">Restauracion de contraseña</h3>
                                 <form>

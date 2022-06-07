@@ -71,10 +71,14 @@ footer {
 
 .enlace-personalizado {
   color: #7ed9d9;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .enlace-personalizado:hover {
   color: #43c8c8;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .dropdown-item:active {

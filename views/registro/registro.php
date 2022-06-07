@@ -13,7 +13,7 @@ $regiones = $_SESSION['regiones'];
                         <div class="card rounded-lg mt-5 bg-dark bordes-card">
                             <div class="card-body">
                                 <div class="mb-4 text-center">
-                                    <img src="https://i.ibb.co/G94yfsv/toppng-com-ersonagens-de-lol-png-teemo-transparent-601x575.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
+                                    <img src="https://i.ibb.co/dLFbq8W/teemo-min.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                                 </div>
                                 <h3 class="text-center font-weight-light my-4">Registro de usuarios</h3>
                                 <form action="http://localhost/lasthit/controladorRegistro" method="POST">
