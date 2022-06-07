@@ -43,7 +43,7 @@ if (isset($_POST['btnRegistro'])) {
                             $_SESSION['error'] = 'No se encontro el invocador';
                             header('Location: http://localhost/lasthit/registro');
                         } else {
-                            $validarUsuario = $objetoUsuarioSql->validarUsuario($_POST['correo'], $_POST['clave'], $conexion);
+                            $validarUsuario = $objetoUsuarioSql->validarUsuario($_POST['correo'], $_POST['nombreInvocador'], $conexion);
                             if ($validarUsuario['cantidadUsuarios'] > 0) {
                                 $_SESSION['error'] = 'El usuario ya existe';
                                 header('Location: http://localhost/lasthit/registro');

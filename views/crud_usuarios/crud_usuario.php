@@ -26,8 +26,15 @@ if (isset($_SESSION['usuarios'])) {
                 </ol>
                 <div class="card mb-4">
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary">Ingresar nuevo usuario</button>
-                        <button type="button" class="btn btn-success">Exportar tabla a excel</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCrearUsuario">
+                            Ingresar nuevo usuario
+                        </button>
+                        <?php include('modales/modalCrear.php'); ?>
+                        <form action="http://localhost/lasthit/controladorCrudUsuarios" method="POST">
+                            <button class="btn btn-success my-1" type="submit" name="btnCrudUsuarios" value="exportarExcel">
+                                Exportar tabla a excel
+                            </button>
+                        </form>
                     </div>
                     <?php if (isset($_SESSION['error'])) { ?>
                         <div class="alert alert-danger my-2" role="alert">
@@ -82,12 +89,17 @@ if (isset($_SESSION['usuarios'])) {
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDetalles<?php echo $usuario['idusuario'] ?>">
                                                 Detalles
                                             </button>
-                                            <button type="button" class="btn btn-danger">Eliminar</button>
+                                            <form action="http://localhost/lasthit/controladorCrudUsuarios" method="POST">
+                                                <input type="hidden" name="idusuario" value="<?php echo $usuario['idusuario'] ?>">
+                                                <button class="btn btn-danger mt-1" type="submit" name="btnCrudUsuarios" value="eliminarUsuario">
+                                                    Eliminar
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                     <?php
-                                    include('modalDetalles.php');
-                                    include('modalEditar.php');
+                                    include('modales/modalDetalles.php');
+                                    include('modales/modalEditar.php');
                                     ?>
                                 <?php
                                 }

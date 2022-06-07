@@ -23,6 +23,10 @@
                     <div class="form-group">
                         <label for="estado">Estado del usuario</label>
                         <select class="form-control" name="estado" id="estado">
+                            <option disabled class="text-primary">Estado actual</option>
+                            <option value="<?php echo $usuario['idestado'] ?>" selected><?php echo $usuario['estado'] ?></option>
+                            <option disabled>------------------</option>
+                            <option disabled class="text-primary">Estados disponibles</option>
                             <?php
                             foreach ($estados as $estado) {
                             ?>
@@ -37,6 +41,10 @@
                     <div class="form-group">
                         <label for="tipoUsuario">Tipo de usuario</label>
                         <select class="form-control" name="tipoUsuario" id="tipoUsuario">
+                            <option disabled class="text-primary">Tipo actual</option>
+                            <option value="<?php echo $usuario['idtipoUsuario'] ?>" selected><?php echo $usuario['tipo'] ?></option>
+                            <option disabled>------------------</option>
+                            <option disabled class="text-primary">Tipos disponibles</option>
                             <?php
                             foreach ($tiposUsuarios as $tipo) {
                             ?>
@@ -51,6 +59,10 @@
                     <div class="form-group">
                         <label for="region">Región de usuario</label>
                         <select class="form-control" name="region" id="region">
+                            <option disabled class="text-primary">Región actual</option>
+                            <option value="<?php echo $usuario['plataforma'] ?>" selected><?php echo $usuario['plataforma'] ?></option>
+                            <option disabled>------------------</option>
+                            <option disabled class="text-primary">Regiones disponibles</option>
                             <?php
                             foreach ($regiones as $region) {
                             ?>

@@ -14,12 +14,26 @@ class UsuarioSql
         $conexion = null;
     }
 
-    public function validarUsuario($correo, $clave, $conexion)
+    public function validarUsuario($correo, $nombreInvocador, $conexion)
     {
         $sql = $conexion->prepare("SELECT COUNT(idusuario) as cantidadUsuarios, idusuario
         FROM usuario
         WHERE usuario.correo = :correo
-        AND usuario.clave = :clave ");
+        OR usuario.nombreInvocador = :nombreInvocador");
+        $sql->bindParam(':correo', $correo);
+        $sql->bindParam(':nombreInvocador', $nombreInvocador);
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        $conexion = null;
+        return $resultado;
+    }
+
+    public function validarUsuarioLogin($correo, $clave, $conexion)
+    {
+        $sql = $conexion->prepare("SELECT COUNT(idusuario) as cantidadUsuarios, idusuario
+        FROM usuario
+        WHERE usuario.correo = :correo
+        AND usuario.clave = :clave");
         $sql->bindParam(':correo', $correo);
         $sql->bindParam(':clave', $clave);
         $sql->execute();
@@ -158,6 +172,18 @@ class UsuarioSql
         $sql = $conexion->prepare("UPDATE usuario SET Region_idRegion = :nuevaRegion, update_usuario = :update_usuario WHERE idusuario = :idusuario");
         $sql->bindParam(':nuevaRegion', $nuevaRegion);
         $sql->bindParam(':update_usuario', $update);
+        $sql->bindParam(':idusuario', $idusuario);
+        if ($sql->execute()) {
+            return 1;
+        } else {
+            return 0;
+        }
+        $conexion = null;
+    }
+
+    public function eliminarUsuario($idusuario, $conexion)
+    {
+        $sql = $conexion->prepare("DELETE FROM usuario WHERE idusuario = :idusuario");
         $sql->bindParam(':idusuario', $idusuario);
         if ($sql->execute()) {
             return 1;

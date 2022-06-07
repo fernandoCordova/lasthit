@@ -16,7 +16,7 @@ if (isset($_POST['btnInicioSesion'])) {
             break;
         case 'validarUsuario':
             $conexion = $objetoConexion->obtenerConexion();
-            $validarExistenciaUsuario = $objetoUsuarioSql->validarUsuario($_POST['correo'], $_POST['clave'], $conexion);
+            $validarExistenciaUsuario = $objetoUsuarioSql->validarUsuarioLogin($_POST['correo'], $_POST['clave'], $conexion);
             $validarEstadoUsuario = $objetoUsuarioSql->validarEstadoUsuario($validarExistenciaUsuario['idusuario'], $conexion);
             if ($validarExistenciaUsuario['cantidadUsuarios'] == 1) {
                 if ($validarEstadoUsuario['cantidadUsuarios'] == 1) {
