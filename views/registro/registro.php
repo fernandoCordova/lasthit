@@ -34,7 +34,7 @@ if (isset($_SESSION['regiones'])) {
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <select class="form-control" name="region" placeholder="Confirm password">
+                                                    <select class="form-control" name="region">
                                                         <?php foreach ($regiones as $region) { ?>
                                                             <option value="<?php echo $region['plataforma'] ?>">
                                                                 <?php echo $region['plataforma'] ?>

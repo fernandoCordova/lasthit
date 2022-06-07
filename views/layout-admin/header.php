@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,16 +11,17 @@
     <meta name="description" content="fernandoc" />
     <meta name="author" content="fernandoc" />
     <title>LASTHIT | Panel de control</title>
-    <link rel="icon" href="https://i.ibb.co/wMhkCJL/facebook-cover-photo-1.png">
+    <link rel="icon" href="https://i.ibb.co/6YpRC0m/favicon-min.png">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="http://localhost/lasthit/css/plantilla/styles.css" rel="stylesheet" />
+    <link href="http://localhost/lasthit/css/plantilla/plantilla-administrador-personalizada.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand ps-3" href="index.html">LASTHIT</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -51,20 +55,24 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Panel de control</div>
-                        <a class="nav-link" href="http://localhost/lasthit/dashboard/administrador/">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Panel de control
-                        </a>
+                        <form action="http://localhost/lasthit/controladorDashboardAdministrador" method="POST">
+                            <button class="nav-link enlace-personalizado" type="submit" name="btnDashboard" value="dashboard">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Panel de control
+                            </button>
+                        </form>
                         <div class="sb-sidenav-menu-heading">Modulos</div>
-                        <a class="nav-link" href="http://localhost/lasthit/dashboard/administrador/crud/usuario">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            CRUD usuarios
-                        </a>
+                        <form action="http://localhost/lasthit/controladorCrudUsuarios" method="POST">
+                            <button class="nav-link enlace-personalizado" type="submit" name="btnCrudUsuarios" value="crudUsuarios">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                                CRUD usuarios
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    fcordova_admin
+                    <div class="small">Logeado como:</div>
+                    <?php echo $_SESSION['usuario']['nombreInvocador'] ?>
                 </div>
             </nav>
         </div>
