@@ -1,13 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['personajes'])) {
-    header('Location: http://localhost/lasthit/inicio');
-} else {
-    unset($_SESSION['personajeEspecifico']);
-    unset($_SESSION['idPersonaje']);
-    include_once('../layout/header.php');
-    $personajes = json_decode($_SESSION['personajes'])->{'data'};
-    
+include_once('../layout/header.php');
+if (isset($_SESSION['personajes'])) {
+$personajes = json_decode($_SESSION['personajes'])->{'data'};
 ?>
     <link rel="stylesheet" href="http://localhost/lasthit/css/analisis_campeones/analisis_campeones.css">
     <div class="container my-5">
@@ -70,5 +64,10 @@ if (!isset($_SESSION['personajes'])) {
     <script src="http://localhost/lasthit/js/analisis_campeones/analisis_campeones.js"></script>
 <?php
     include_once('../layout/footer.php');
+} else {
+?>
+    <meta http-equiv="refresh" content="0;url=http://localhost/lasthit/inicio">
+<?php
 }
+
 ?>

@@ -1,12 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION['regiones'])) {
-    header('Location: http://localhost/lasthit/inicio');
-} else {
-    unset($_SESSION['invocador']);
-    unset($_SESSION['ligas']);
-    unset($_SESSION['personajes']);
-    include_once('../layout/header.php');
+include_once('../layout/header.php');
+if (isset($_SESSION['regiones'])) {
     $regiones = $_SESSION['regiones'];
 ?>
     <link rel="stylesheet" href="http://localhost/lasthit/css/buscar_invocador/buscar_invocador.css">
@@ -53,5 +47,10 @@ if (!isset($_SESSION['regiones'])) {
     <script src="http://localhost/lasthit/js/buscar_invocador/buscar_invocador.js"></script>
 <?php
     include_once('../layout/footer.php');
+} else {
+?>
+    <meta http-equiv="refresh" content="0;url=http://localhost/lasthit/inicio">
+<?php
 }
+
 ?>

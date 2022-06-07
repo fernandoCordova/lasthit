@@ -28,12 +28,19 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Configuracion de administrador</a></li>
-                    <li><a class="dropdown-item" href="#!">Volver a LASTHIT</a></li>
+                    <form action="http://localhost/lasthit/controladorInicio" method="post">
+                        <li>
+                            <button class="dropdown-item" name="btnInicio" value="inicio">Volver a LASTHIT</button>
+                        </li>
+                    </form>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="http://localhost/lasthit/inicio">Cerrar sesión</a></li>
+                    <form action="http://localhost/lasthit/controladorLogin" method="post">
+                        <li>
+                            <button class="dropdown-item" name="btnInicioSesion" value="cerrarSesion">Cerrar sesión</button>
+                        </li>
+                    </form>
                 </ul>
             </li>
         </ul>

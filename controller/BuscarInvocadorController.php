@@ -11,7 +11,6 @@ if (isset($_POST['btnBuscarInvocador'])) {
     $objetoRegionSql = new RegionSql();
     $objetoInvocadorApi = new InvocadorApi();
     $objetoPersonajeApi = new PersonajeApi();
-
     $accionSeleccionada = $_POST['btnBuscarInvocador'];
     switch ($accionSeleccionada) {
         case 'buscarInvocador':

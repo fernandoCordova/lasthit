@@ -30,6 +30,9 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    ?>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
@@ -62,14 +65,71 @@
                             <button class="nav-link btn-navbar" name="btnRanking" value="ranking">Ranking</button>
                         </li>
                     </form>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                            <li><a class="dropdown-item" href="http://localhost/lasthit/login">Iniciar sesión</a></li>
-                            <li><a class="dropdown-item" href="http://localhost/lasthit/registro">Registro</a></li>
-                            <li><a class="dropdown-item" href="http://localhost/lasthit/perfil">Perfil</a></li>
-                        </ul>
-                    </li>
+                    <?php
+                    if (isset($_SESSION['usuario'])) {
+                        if ($_SESSION['usuario']['tipoUsuario_idtipoUsuario'] == 1) {
+                    ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo $_SESSION['usuario']['nombreInvocador'] ?></a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <form action="http://localhost/lasthit/controladorPerfil" method="post">
+                                        <li>
+                                            <button class="dropdown-item" name="btnPerfil" value="perfil">Perfil</button>
+                                        </li>
+                                    </form>
+                                    <form action="http://localhost/lasthit/controladorDashboardAdministrador" method="post">
+                                        <li>
+                                            <button class="dropdown-item" name="btnDashboard" value="dashboard">Dashboard</button>
+                                        </li>
+                                    </form>
+                                    <form action="http://localhost/lasthit/controladorLogin" method="post">
+                                        <li>
+                                            <button class="dropdown-item" name="btnInicioSesion" value="cerrarSesion">Cerrar sesión</button>
+                                        </li>
+                                    </form>
+                                </ul>
+                            </li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $_SESSION['usuario']['nombreInvocador'] ?></a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <form action="http://localhost/lasthit/controladorPerfil" method="post">
+                                        <li>
+                                            <button class="dropdown-item" name="btnPerfil" value="perfil">Perfil</button>
+                                        </li>
+                                    </form>
+                                    <form action="http://localhost/lasthit/controladorLogin" method="post">
+                                        <li>
+                                            <button class="dropdown-item" name="btnInicioSesion" value="cerrarSesion">Cerrar sesión</button>
+                                        </li>
+                                    </form>
+                                </ul>
+                            </li>
+                        <?php
+                        }
+                    } else {
+                        ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <form action="http://localhost/lasthit/controladorLogin" method="post">
+                                    <li>
+                                        <button class="dropdown-item" name="btnInicioSesion" value="index">Iniciar</button>
+                                    </li>
+                                </form>
+                                <form action="http://localhost/lasthit/controladorRegistro" method="post">
+                                    <li>
+                                        <button class="dropdown-item" name="btnRegistro" value="registro">Registro</button>
+                                    </li>
+                                </form>
+                            </ul>
+                        </li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

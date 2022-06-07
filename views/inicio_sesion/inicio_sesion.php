@@ -14,19 +14,34 @@ include_once('../layout/header.php');
                                     <img src="https://i.ibb.co/M6tBMnh/pngwing-com.png" class="img-fluid" alt="logo-buscar-invocador" width="250">
                                 </div>
                                 <h3 class="text-center font-weight-light my-4">Inicio de sesión</h3>
-                                <form>
+                                <form action="http://localhost/lasthit/controladorLogin" method="POST">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="correo" type="email" placeholder="correo@correo.com" />
+                                        <input class="form-control" name="correo" type="email" placeholder="correo@correo.com" />
                                         <label for="correo" class="label-personalizado">Correo</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="clave" type="password" placeholder="Contraseña" />
+                                        <input class="form-control" name="clave" type="password" placeholder="Contraseña" />
                                         <label for="clave" class="label-personalizado">Contraseña</label>
                                     </div>
-                                    
+                                    <?php if (isset($_SESSION['error'])) { ?>
+                                        <div class="alert alert-danger my-2" role="alert">
+                                            <?php
+                                            print_r($_SESSION['error']);
+                                            unset($_SESSION['error']);
+                                            ?>
+                                        </div>
+                                    <?php } ?>
+                                    <?php if (isset($_SESSION['exito'])) { ?>
+                                        <div class="alert alert-success my-2" role="alert">
+                                            <?php
+                                            print_r($_SESSION['exito']);
+                                            unset($_SESSION['exito']);
+                                            ?>
+                                        </div>
+                                    <?php } ?>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small enlace-personalizado" href="restaurar_clave">¿Olvidaste tu contraseña?</a>
-                                        <a class="btn boton-general" href="dashboard/administrador/">Ingresar</a>
+                                        <button class="btn boton-general" type="submit" name="btnInicioSesion" value="validarUsuario">Ingresar</button>
                                     </div>
                                 </form>
                             </div>
