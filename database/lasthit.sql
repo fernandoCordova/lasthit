@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2022 a las 19:03:27
+-- Tiempo de generación: 08-06-2022 a las 05:02:31
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -31,6 +31,14 @@ CREATE TABLE `estado` (
   `idestado` int(11) NOT NULL,
   `estado` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `estado`
+--
+
+INSERT INTO `estado` (`idestado`, `estado`) VALUES
+(1, 'Habilitado'),
+(2, 'Dehabilitado');
 
 -- --------------------------------------------------------
 
@@ -72,6 +80,14 @@ CREATE TABLE `tipousuario` (
   `tipo` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `tipousuario`
+--
+
+INSERT INTO `tipousuario` (`idtipoUsuario`, `tipo`) VALUES
+(1, 'Administrador'),
+(2, 'Usuario');
+
 -- --------------------------------------------------------
 
 --
@@ -83,13 +99,21 @@ CREATE TABLE `usuario` (
   `correo` text NOT NULL,
   `clave` varchar(12) NOT NULL,
   `nombreInvocador` varchar(12) NOT NULL,
-  `create` datetime DEFAULT NULL,
-  `update` datetime DEFAULT NULL,
-  `delete` datetime DEFAULT NULL,
+  `create_usuario` datetime DEFAULT NULL,
+  `update_usuario` datetime DEFAULT NULL,
+  `delete_usuario` datetime DEFAULT NULL,
   `tipoUsuario_idtipoUsuario` int(11) NOT NULL,
   `estado_idestado` int(11) NOT NULL,
   `Region_idRegion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`idusuario`, `correo`, `clave`, `nombreInvocador`, `create_usuario`, `update_usuario`, `delete_usuario`, `tipoUsuario_idtipoUsuario`, `estado_idestado`, `Region_idRegion`) VALUES
+(23, 'administrador@gmail.com', '1234567', 'drakma', '2022-06-07 02:18:24', '2022-06-07 14:18:31', NULL, 1, 1, 7),
+(24, 'correonuevo@gmail.com', 'asd123', '222222222222', '2022-06-07 14:41:52', '2022-06-07 17:21:22', NULL, 2, 1, 7);
 
 --
 -- Índices para tablas volcadas
@@ -130,7 +154,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `estado`
 --
 ALTER TABLE `estado`
-  MODIFY `idestado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idestado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `region`
@@ -142,13 +166,13 @@ ALTER TABLE `region`
 -- AUTO_INCREMENT de la tabla `tipousuario`
 --
 ALTER TABLE `tipousuario`
-  MODIFY `idtipoUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idtipoUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Restricciones para tablas volcadas
