@@ -192,4 +192,169 @@ class UsuarioSql
         }
         $conexion = null;
     }
+
+    public function obtenerCantidadUsuariosRegistrados($conexion)
+    {
+        $sql = $conexion->prepare("SELECT COUNT(*) AS cantidad FROM usuario");
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        $conexion = null;
+        return $resultado;
+    }
+
+    public function obtenerCantidadDeUsuariosAdministradores($conexion)
+    {
+        $sql = $conexion->prepare("SELECT COUNT(*) AS cantidad FROM usuario WHERE tipoUsuario_idtipoUsuario = 1");
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        $conexion = null;
+        return $resultado;
+    }
+
+    public function obtenerCantidadDeUsuariosPorServidor($conexion){
+        $sql = $conexion->prepare("SELECT COUNT(*) AS cantidad, region.plataforma FROM usuario
+        INNER JOIN region
+        ON usuario.Region_idRegion = region.idRegion
+        GROUP BY region.plataforma");
+        $sql->execute();
+        $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $conexion = null;
+        $arrayUsuarioPorRegion = [];
+        $br1 = 0;
+        $eun1 = 0;
+        $euw1 = 0;
+        $jp1 = 0;
+        $kr = 0;
+        $la1 = 0;
+        $la2 = 0;
+        $na1 = 0;
+        $oc1 = 0;
+        $tr1 = 0;
+        $ru = 0;
+        foreach ($resultado as $cantidad) {
+            if ($cantidad['plataforma'] == 'BR1') {
+                $br1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'EUN1') {
+                $eun1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'EUW1') {
+                $euw1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'JP1') {
+                $jp1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'KR') {
+                $kr = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'LA1') {
+                $la1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'LA2') {
+                $la2 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'NA1') {
+                $na1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'OC1') {
+                $oc1 = $cantidad['cantidad'];
+            } 
+            if ($cantidad['plataforma'] == 'TR1') {
+                $tr1 = $cantidad['cantidad'];
+            }
+            if ($cantidad['plataforma'] == 'RU') {
+                $ru = $cantidad['cantidad'];
+            }
+        }
+
+        $arrayUsuarioPorRegion = [
+            $br1,
+            $eun1,
+            $euw1,
+            $jp1,
+            $kr,
+            $la1,
+            $la2,
+            $na1,
+            $oc1,
+            $tr1,
+            $ru
+        ];
+        return $arrayUsuarioPorRegion;
+    }
+
+    public function obtenerCantidadDeUsuariosPorMes($conexion)
+    {
+        $sql = $conexion->prepare("SELECT COUNT(*) AS cantidad, MONTH(create_usuario) AS mes FROM usuario GROUP BY MONTH(create_usuario)");
+        $sql->execute();
+        $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $conexion = null;
+        $arrayUsuariosPorMes = [];
+        $enero = 0;
+        $febrero = 0;
+        $marzo = 0;
+        $abril = 0;
+        $mayo = 0;
+        $junio = 0;
+        $julio = 0;
+        $agosto = 0;
+        $septiembre = 0;
+        $octubre = 0;
+        $noviembre = 0;
+        $diciembre = 0;
+        foreach ($resultado as $cantidad) {
+            if ($cantidad['mes'] == 1) {
+                $enero = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 2) {
+                $febrero = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 3) {
+                $marzo = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 4) {
+                $abril = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 5) {
+                $mayo = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 6) {
+                $junio = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 7) {
+                $julio = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 8) {
+                $agosto = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 9) {
+                $septiembre = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 10) {
+                $octubre = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 11) {
+                $noviembre = $cantidad['cantidad'];
+            }
+            if ($cantidad['mes'] == 12) {
+                $diciembre = $cantidad['cantidad'];
+            }
+        }
+
+        $arrayUsuariosPorMes = [
+            $enero,
+            $febrero,
+            $marzo,
+            $abril,
+            $mayo,
+            $junio,
+            $julio,
+            $agosto,
+            $septiembre,
+            $octubre,
+            $noviembre,
+            $diciembre
+        ];
+        return $arrayUsuariosPorMes;
+    }
 }
