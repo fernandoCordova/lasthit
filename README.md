@@ -6,16 +6,16 @@ LastHit es una plataforma para revisar diferentes aspectos del videojuego League
 ***
 Estado: En desarrollo.
 * inicio: Terminado.
-* Modulo invocador: Terminado (funcionalidades pendientes).
-* Modulo personajes: Terminado (funcionalidades pendientes).
-* Modulo objetos: Terminado (funcionalidades pendientes).
-* Modulo ranking: Proceso.
-* Modulo login: Pendiente.
-* Modulo registro: Pendiente.
-* Modulo perfil: Pendiente.
+* Modulo invocador: Terminado
+* Modulo personajes: Terminado
+* Modulo objetos: Terminado
+* Modulo ranking: Terminado.
+* Modulo login: Terminado.
+* Modulo registro: Terminado.
+* Modulo perfil: Terminado.
 * Modulo recuperar contraseña: Pendiente.
-* Modulo dashboard admin: Pendiente.
-* Modulo crud usuarios: Pendiente.
+* Modulo dashboard admin: Terminado.
+* Modulo crud usuarios: Terminado.
 ## Tecnologias
 ***
 Tecnologias usadas en el proyecto:
