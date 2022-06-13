@@ -4,7 +4,7 @@
 LastHit es una plataforma para revisar diferentes aspectos del videojuego League of legends consumiendo directamente el contenido que ofrece la api del mismo.
 ## Estado del proyecto
 ***
-Estado: En desarrollo.
+Estado: Finalizado.
 * inicio: Terminado.
 * Modulo invocador: Terminado
 * Modulo personajes: Terminado
