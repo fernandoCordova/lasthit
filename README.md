@@ -13,7 +13,6 @@ Estado: En desarrollo.
 * Modulo login: Terminado.
 * Modulo registro: Terminado.
 * Modulo perfil: Terminado.
-* Modulo recuperar contraseña: Pendiente.
 * Modulo dashboard admin: Terminado.
 * Modulo crud usuarios: Terminado.
 ## Tecnologias
