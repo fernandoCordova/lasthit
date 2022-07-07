@@ -1,5 +1,6 @@
 <?php
 include_once('../layout/header.php');
+echo "Hola mundo";
 ?>
 <link rel="stylesheet" href="http://localhost/lasthit/css/inicio/inicio.css">
 <!-- Header-->

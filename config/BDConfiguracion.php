@@ -3,6 +3,7 @@ class BDConfiguracion
 {
     static public function obtenerConexion()
     {
+        echo "hola";
         $host = '127.0.0.1';
         $db = 'lasthit';
         $usuario = 'root';
